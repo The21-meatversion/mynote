@@ -130,7 +130,7 @@
                     notes
                 </span>
                 <span class="badge bg-info-subtle border border-info-subtle text-info-emphasis rounded-pill">
-                    Info
+                    settings
                 </span>
                 <span class="badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill">
                     Light
@@ -153,41 +153,41 @@
                         1. Update and install dependencies
                     </h3>
                     <p>
-                        sudo apt-get update
+                        <code>sudo apt-get update</code>
                     </p>
                     <p>
-                        sudo apt-get install ca-certificates curl gnupg lsb-release
+                        <code>sudo apt-get install ca-certificates curl gnupg lsb-release</code>
                     </p>
                     <h3>
                         2. Set up the Docker repository
                     </h3>
                     <p>
-                        sudo mkdir -p /etc/apt/keyrings
+                        <code>sudo mkdir -p /etc/apt/keyrings</code>
                     </p>
                     <p>
-                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+                        <code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg</code>
                     </p>
                     <p>
-                        echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+                        <code>echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null</code>
                     </p>
                     <h3>
                         3. Install the docker engine
                     </h3>
                     <p>
-                        sudo apt update
+                        <code>sudo apt update</code>
                     </p>
                     <p>
-                        sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+                        <code>sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin</code>
                     </p>
                     <h3>
                         4. Install Docker Desktop
                     </h3>
                     <p>
-                        sudo apt-get install ./docker-desktop-
+                        <code>sudo apt-get install ./docker-desktop-
                         <!--/version-->
                         -
                         <!--/arch-->
-                        .deb
+                        .deb</code>
                     </p>
                 </p>
             </div>
@@ -222,6 +222,7 @@
             </b>
         </button>
         <div class="panel">
+            <p>
             <h3>
                 Location: /etc/default/console-setup
             </h3>
@@ -229,21 +230,22 @@
                 What to change:
             </p>
             <p>
-                FONTFACE="Terminus"
+                <code>FONTFACE="Terminus"
                 <br>
                     FONTSIZE="16x32"
-                </br>
+                </code>
             </p>
             <h3>
                 Update after changed
             </h3>
             <p>
-                sudo update-initramfs -u
+                <code>sudo update-initramfs -u</code>
             </p>
             <p>
-                sudo reboot
+                <code>sudo reboot</code>
             </p>
         </div>
+    </p>
     </div>
     <div class="tabcontent" id="Contact">
         <h3>

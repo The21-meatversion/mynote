@@ -1,36 +1,193 @@
 /* Set height of body and the document to 100% to enable "full page tabs" */
+
 body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
 }
-
 /* Style tab links */
+
 .tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
+    background-color: #555;
+    /* Xám đậm */
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
 }
-
 .tablink:hover {
-  background-color: #777;
+    background-color: #777;
+    /* Xám nhạt hơn */
 }
+/* Style the tab content (full page content) */
 
-/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: whitesmoke;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+    color: whitesmoke;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
 }
+/* Tab background colors */
 
-#Docker {background-color: #3282B8;}
-#Linux {background-color: #C63C51;}
-#Contact {background-color: #704264;}
-#About {background-color: #A76F6F;}
+#Docker {
+    background-color: #3282B8;
+    /* Xanh dương */
+}
+#Linux {
+    background-color: #C63C51;
+    /* Đỏ đậm */
+}
+#Contact {
+    background-color: #704264;
+    /* Tím đậm */
+}
+#About {
+    background-color: #A76F6F;
+    /* Hồng đất */
+}
+/* Common transition effects */
+
+.tabcontent, .tablink, .accordion, .panel {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+/* Light Mode */
+
+html[data-bs-theme="light"] .tabcontent {
+    background-color: #ffffff;
+    /* Trắng */
+    color: #000000;
+    /* Đen */
+}
+html[data-bs-theme="light"] .tablink, html[data-bs-theme="light"] .panel {
+    background-color: #f8f9fa;
+    /* Xám rất nhạt */
+    color: #000000;
+    /* Đen */
+    border: 1px solid #ccc;
+    /* Viền xám nhạt */
+}
+html[data-bs-theme="light"] .tablink:hover {
+    background-color: #e9ecef;
+    /* Xám hơi đậm hơn */
+}
+/* Dark Mode */
+
+html[data-bs-theme="dark"] .tabcontent {
+    background-color: #2c2f33;
+    /* Xám đen */
+    color: #ffffff;
+    /* Trắng */
+    border: 1px solid #444;
+    /* Viền xám đậm */
+}
+html[data-bs-theme="dark"] .tablink {
+    background-color: #3a3f44;
+    /* Xám than */
+    color: #ffffff;
+    /* Trắng */
+    border: 1px solid #555;
+    /* Viền xám trung bình */
+}
+html[data-bs-theme="dark"] .panel {
+    background-color: #3a3f44;
+    /* Xám than */
+    color: #f0eded;
+    /* Trắng */
+    border: 1px solid #555;
+    /* Viền xám trung bình */
+}
+html[data-bs-theme="dark"] .tablink:hover {
+    background-color: #4a4f55;
+    /* Xám đậm hơn */
+}
+/* Accordion giữ nguyên màu của dark mode */
+
+.accordion {
+    background-color: #f2f2f2 !important;
+    /* Silver */
+    color: #4a4f55 !important;
+    /* Đen */
+    border: 1px solid #555 !important;
+    /* Viền xám trung bình */
+}
+html[data-bs-theme="light"] .accordion {
+    background-color: #3a3f44 !important;
+    /* Silver */
+    color: #ffffff !important;
+    /* Trắng */
+    border: 1px solid #555 !important;
+    /* Viền xám trung bình */
+}
+html[data-bs-theme="light"] .accordion:hover {
+    /*background-color: #4a4f55 !important; /* Xám đậm hơn khi hover */
+    /*background-color: #75B798 !important;
+    background-color: #FFF3CD !important; */
+    background-color: #75B798 !important;
+    color: #4a4f55 !important;
+}
+html[data-bs-theme="dark"] .accordion:hover {
+    /*background-color: #4a4f55 !important; /* Xám đậm hơn khi hover */
+    /*background-color: #75B798 !important;*/
+    background-color: #4a4f55 !important;
+    color: #75B798 !important;
+}
+/* Body default theme */
+
+body {
+    background-color: var(--bs-body-bg);
+    transition: background-color 0.3s ease-in-out;
+}
+/* Light Mode Body */
+
+html[data-bs-theme="light"] body {
+    background-color: #f8f9fa;
+    /* Xám rất nhạt */
+    color: #000;
+    /* Đen */
+}
+/* Dark Mode Body */
+
+html[data-bs-theme="dark"] body {
+    background-color: #212529;
+    /* Xám đen nhạt */
+    color: #fff;
+    /* Trắng */
+}
+/* Bootstrap Icons */
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+/* Button Primary */
+
+.btn-bd-primary {
+    --bd-violet-bg: #8AB2A6;
+    /* Bạc */
+    --bd-violet-rgb: 192, 192, 192;
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #A9A9A9;
+    /* Xám trung bình */
+    --bs-btn-hover-border-color: #A9A9A9;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #909090;
+    /* Xám hơi tối */
+    --bs-btn-active-border-color: #909090;
+}
+/* Mode Toggle */
+
+.bd-mode-toggle {
+    z-index: 1500;
+}
+.bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+}

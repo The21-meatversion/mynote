@@ -194,3 +194,6 @@ html[data-bs-theme="dark"] body {
 .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
 }
+.d-flex {
+    flex-wrap: wrap;
+}

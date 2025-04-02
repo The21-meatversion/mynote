@@ -133,10 +133,10 @@
                     settings
                 </span>
                 <span class="badge bg-light-subtle border border-light-subtle text-light-emphasis rounded-pill">
-                    Light
+                    essential
                 </span>
                 <span class="badge bg-dark-subtle border border-dark-subtle text-dark-emphasis rounded-pill">
-                    Dark
+                    commands
                 </span>
             </div>
             <p>
@@ -192,19 +192,37 @@
                 </p>
             </div>
             <button class="accordion">
-                Section 2
+                <b>Install Docker on Ubuntu Server</b>
             </button>
             <div class="panel">
+                <p><h3>1. Installing</h3></p>
                 <p>
-                    Lorem ipsum...
+                    <code>sudo apt install docker.io -y</code>
+                </p>
+                <p><h3>2. Starting</h3></p>
+                <p><code>sudo systemctl start docker</code></p>
+                <p><h3>3. Enable docker on boot</h3></p>
+                <p><code>sudo systemctl enable docker</code></p>
+                <p><h3>4. Checking status</h3></p>
+                <p><code>sudo systemctl status docker</code></p>
+            </div>
+            <button class="accordion">
+                <b>Run Docker without <i><u>sudo</u></i></b>
+            </button>
+            <div class="panel">
+                <p></p>
+                <p>
+                    <code>sudo usermod -aG docker $USER</code> <br>
+                    <code>newgrp docker</code>
                 </p>
             </div>
             <button class="accordion">
-                Section 3
+                <b>Essential Command</b>
             </button>
             <div class="panel">
+                <p></p>
                 <p>
-                    Lorem ipsum...
+                    Updating....
                 </p>
             </div>
         </p>
@@ -245,6 +263,93 @@
                 <code>sudo reboot</code>
             </p>
         </div>
+        <button class="accordion">
+                <b>Make Ubuntu Server CLI colorful</b>
+        </button>
+            <div class="panel">
+                <p><h3>Set the username and hostname in green, the current working directory in blue, and resets the color at the end</h3></p>
+                <p align="center">
+                    <code>PS1="\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\$ "</code>
+                </p>
+                <button class="accordion">
+                    <b>Common PS1 Escape Sequences for Color</b>
+                </button>
+                <div class="panel">
+                    <p></p>
+                    <p>
+                        <code>\e[</code>: Start of an escape sequence. <br>
+                        <code>[m</code>: End of the color escape sequence.
+                    </p>
+                    <table align="center" border="1" width="100%">
+                        <tr bgcolor="coral">
+                            <th>Foreground Colors (30-37)</th>
+                            <th>Background Colors (40-47)</th>
+                            <th>Text Attributes</th> 
+                        </tr>
+                        <tr><td colspan="3"> </td></tr>
+                        <tr>
+                            <td style="width:33%;">
+                                <p>
+                                    <code>30</code>: Black <br>
+                                    <code>31</code>: Red <br>
+                                    <code>32</code>: Green <br>
+                                    <code>33</code>: Yellow <br>
+                                    <code>34</code>: Blue <br>
+                                    <code>35</code>: Magenta <br>
+                                    <code>36</code>: Cyan <br>
+                                    <code>37</code>: White <br>
+                                </p>
+                            </td>
+                            <td style="width:33%;">
+                                <p>
+                                    <code>40</code>: Black background <br> 
+                                    <code>41</code>: Red background <br>
+                                    <code>42</code>: Green background <br>
+                                    <code>43</code>: Yellow background <br>
+                                    <code>44</code>: Blue background <br>
+                                    <code>45</code>: Magenta background <br>
+                                    <code>46</code>: Cyan background <br>
+                                    <code>47</code>: White background <br>
+                                </p>
+                            </td>
+                            <td style="width:33%;">
+                                <p>
+                                    <code>0</code>: Reset all attributes (colors, bold, etc.) <br>
+                                    <code>1</code>: Bold <br>
+                                    <code>4</code>: Underline <br>
+                                    <code>7</code>: Invert colors <br>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p></p>   
+            </div>
+        <button class="accordion">
+            <b>Setting up apache2 on Ubuntu Server</b>
+        </button>
+        <div class="panel">
+            <p><h3>1. Installing</h3></p>
+            <p>
+                <code>sudo apt install apache2 -y</code>
+            </p>
+            <p><h3>2. Starting</h3></p>
+            <p>
+                <code>sudo systemctl start apache2</code>
+            </p>
+            <p><h3>3. Enable apache2 on boot</h3></p>
+            <p>
+                <code>sudo systemctl start apache2</code>
+            </p>
+        </div>
+        <button class="accordion">
+            <b>New note stays here</b>
+        </button>
+        <div class="panel">
+            <p>
+                Updating...
+            </p>
+        </div>
     </p>
     </div>
     <div class="tabcontent" id="Contact">
@@ -254,6 +359,15 @@
         <p>
             Get in touch, or swing by for a cup of coffee.
         </p>
+        <button class="accordion">
+            <b>New note stays here</b>
+        </button>
+        <div class="panel">
+            <p></p>
+            <p>
+                Updating....
+            </p>
+        </div>
     </div>
     <div class="tabcontent" id="About">
         <h3>
@@ -262,6 +376,15 @@
         <p>
             Who we are and what we do.
         </p>
+        <button class="accordion">
+            <b>New note stays here</b>
+        </button>
+        <div class="panel">
+            <p></p>
+            <p>
+                Updating....
+            </p>
+        </div>
     </div>
     <!-- Javascript -->
     <script src="js/javascript.js">
